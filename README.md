@@ -76,7 +76,7 @@ To run this project, you will need the following installed on your system:
 5. **Set up MongoDB**:
    - Download and install MongoDB.
    - Start the MongoDB server.
-     - It is recommended to install **MongoDBCompass** to visualize data and makes working with mongodb easier.
+     - It is recommended to install also **MongoDBCompass** to visualize data and makes working with mongodb easier.
 
 6. **Install Python dependencies**:
    - To install pySpark - PyMongo - Django ...
@@ -85,7 +85,15 @@ To run this project, you will need the following installed on your system:
    ```
 
 ### Running the Project
- 
+
+   Note : you will need MongoDB for Running the Kafka and Spark Streaming application and for Running Django Dashboard application.
+-> **Start MongoDB**:
+   - using command line :
+   ```bash
+   mongod
+   ```
+   - or using **MongoDBCompass** (Recommended).
+
 #### Running the Kafka and Spark Streaming application :
 
 1. **Change the directory to the application**:
@@ -94,22 +102,18 @@ To run this project, you will need the following installed on your system:
    ```
 
 2. **Start Kafka in docker**:
+   - using command line :
    ```bash
    docker exec -it kafka1 /bin/bash
    ```
+   - using docker desktop :
+     ![ docker desktop img](imgs/img5.png)
 
-3. **Run kafka Zookeeper and a Broker**:
+4. **Run kafka Zookeeper and a Broker**:
    ```bash
    kafka-topics --create --topic twitter --bootstrap-server localhost:9092
    kafka-topics --describe --topic twitter --bootstrap-server localhost:9092
    ```
-
-4. **Start MongoDB**:
-   - using command line :
-   ```bash
-   mongod
-   ```
-   - or using **MongoDBCompass** (Recommended).
 
 5. **Run kafka provider app**:
    ```bash
@@ -121,13 +125,31 @@ To run this project, you will need the following installed on your system:
    py consumer-pyspark.py
    ```
 
-5. **Run the Django server**:
+![Running the Kafka and Spark Streaming application img](img/img6.png)
+
+#### Running Django Dashboard application :
+
+1. **Change the directory to the application**:
+   ```bash
+   cd Django-Dashboard
+   ```
+
+2. **Creating static folder**:
+   ```bash
+   python manage.py collectstatic
+   ```
+
+3. **Run the Django server**:
    ```bash
    python manage.py runserver
    ```
 
-6. **Access the Dashboard**:
+4. **Access the Dashboard**:
    Open your web browser and go to `http://127.0.0.1:8000` to view the real-time sentiment analysis dashboard.
+
+![Running the Dashboard](img/img2.png)
+
+![Running the Dashboard](img/img3.png)
 
 ## Contributing
 
