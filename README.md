@@ -152,15 +152,17 @@ this is an img of the MongoDBCompass after Running the Kafka and Spark Streaming
 4. **Access the Dashboard**:
    Open your web browser and go to `http://127.0.0.1:8000` to view the real-time sentiment analysis dashboard.
 
-![Running the Dashboard](imgs/img2.png)
+![the Dashboard](imgs/img2.png)
 
 ![Running the Dashboard](imgs/img3.png)
 
 ## More informations : 
 
 - Django Dashboard get the data from MongoDb DataBase.
-- 
-
+- the User can classify his owne text in `http://127.0.0.1:8000/classify` link.
+- in the Dashboard, There is a table contains tweets with labels.
+- in the Dashboard, There is 3 statistics or plots : labels rates - pie plot - bar plot.
+  
 ---
 
 By following the above instructions, you should be able to set up and run the real-time Twitter sentiment analysis project on your local machine. Happy coding!
