@@ -13,7 +13,7 @@ The project is built using the following components:
 - **MongoDB**: Stores the processed sentiment data.
 - **Django**: Serves as the web framework for building a real-time dashboard to visualize the sentiment analysis results.
 
-- This is an img about the project :
+- This is the project plan :
    ![project img](imgs/flow.png)
 
 ## Features
@@ -43,6 +43,8 @@ https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
 
 - **Django-Dashboard** : this folder contains Dashboard Django Application
 - **Kafka-PySpark** : this folder contains kafka provider and pyspark streaming (kafka consumer).
+- **zk-single-kafka-single.yml** : Download and install Apache Kafka in docker.
+- **bigdataproject rapport** : a brief report about the project (in french).
 
 ## Getting Started
 
