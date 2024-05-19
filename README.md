@@ -168,5 +168,3 @@ this is an img of the MongoDBCompass after Running the Kafka and Spark Streaming
 ---
 
 By following the above instructions, you should be able to set up and run the real-time Twitter sentiment analysis project on your local machine. Happy coding!
-
-By : Ayman Boufarhi, Khattabi Driss, Abdelali IBN TABET
