@@ -1,4 +1,4 @@
-# Big Data Project: Real-Time Twitter Sentiment Analysis
+# Big Data Project: Real-Time Twitter Sentiment Analysis Using Kafka, Pyspark, MongoDB and Django.
 
 ## Overview
 
@@ -165,7 +165,12 @@ this is an img of the MongoDBCompass after Running the Kafka and Spark Streaming
 - the User can classify his owne text in `http://127.0.0.1:8000/classify` link.
 - in the Dashboard, There is a table contains tweets with labels.
 - in the Dashboard, There is 3 statistics or plots : labels rates - pie plot - bar plot.
-  
+
+
+## Author :
+
+Khattabi Idriss / Boufarhi Ayman / Abdelali IBN TABET
+
 ---
 
 By following the above instructions, you should be able to set up and run the real-time Twitter sentiment analysis project on your local machine. Happy coding!
