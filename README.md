@@ -43,6 +43,7 @@ https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
 
 - **Django-Dashboard** : this folder contains Dashboard Django Application
 - **Kafka-PySpark** : this folder contains kafka provider and pyspark streaming (kafka consumer).
+- **ML PySpark Model** : this folder contains the trained model with jupyter notebook and datasets.
 - **zk-single-kafka-single.yml** : Download and install Apache Kafka in docker.
 - **bigdataproject rapport** : a brief report about the project (in french).
 
