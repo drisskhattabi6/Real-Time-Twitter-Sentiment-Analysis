@@ -128,6 +128,10 @@ To run this project, you will need the following installed on your system:
 
 ![Running the Kafka and Spark Streaming application img](imgs/img6.png)
 
+this is an img of the MongoDBCompass after Running the Kafka and Spark Streaming application :
+
+![MongoDBCompass img](imgs/img4.png)
+
 #### Running Django Dashboard application :
 
 1. **Change the directory to the application**:
@@ -151,6 +155,11 @@ To run this project, you will need the following installed on your system:
 ![Running the Dashboard](imgs/img2.png)
 
 ![Running the Dashboard](imgs/img3.png)
+
+## More informations : 
+
+- Django Dashboard get the data from MongoDb DataBase.
+- 
 
 ---
 
