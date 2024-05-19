@@ -107,6 +107,7 @@ To run this project, you will need the following installed on your system:
    docker exec -it kafka1 /bin/bash
    ```
    - using docker desktop :
+     
      ![ docker desktop img](imgs/img5.png)
 
 4. **Run kafka Zookeeper and a Broker**:
@@ -125,7 +126,7 @@ To run this project, you will need the following installed on your system:
    py consumer-pyspark.py
    ```
 
-![Running the Kafka and Spark Streaming application img](img/img6.png)
+![Running the Kafka and Spark Streaming application img](imgs/img6.png)
 
 #### Running Django Dashboard application :
 
@@ -147,21 +148,9 @@ To run this project, you will need the following installed on your system:
 4. **Access the Dashboard**:
    Open your web browser and go to `http://127.0.0.1:8000` to view the real-time sentiment analysis dashboard.
 
-![Running the Dashboard](img/img2.png)
+![Running the Dashboard](imgs/img2.png)
 
-![Running the Dashboard](img/img3.png)
-
-## Contributing
-
-Contributions are welcome! Please fork the repository and submit a pull request with your changes.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
-
-## Contact
-
-For any questions or suggestions, please open an issue or contact us at [your-email@example.com].
+![Running the Dashboard](imgs/img3.png)
 
 ---
 
