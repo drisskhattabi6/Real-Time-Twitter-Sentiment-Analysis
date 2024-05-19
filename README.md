@@ -8,7 +8,7 @@ This repository contains a Big Data project focused on real-time sentiment analy
 
 The project is built using the following components:
 
-- **Apache Kafka**: Used for real-time data ingestion from Twitter.
+- **Apache Kafka**: Used for real-time data ingestion from Twitter DataSet.
 - **Spark Streaming**: Processes the streaming data from Kafka to perform sentiment analysis.
 - **MongoDB**: Stores the processed sentiment data.
 - **Django**: Serves as the web framework for building a real-time dashboard to visualize the sentiment analysis results.
@@ -18,16 +18,15 @@ The project is built using the following components:
 
 ## Features
 
-- **Real-time Data Ingestion**: Collects live tweets using Kafka from the Twitter API.
+- **Real-time Data Ingestion**: Collects live tweets using Kafka from the Twitter DataSet.
 - **Stream Processing**: Utilizes Spark Streaming to process and analyze the data in real-time.
 - **Sentiment Analysis**: Classifies tweets into different sentiment categories (positive, negative, neutral) using natural language processing (NLP) techniques.
 - **Data Storage**: Stores the sentiment analysis results in MongoDB for persistence.
 - **Visualization**: Provides a real-time dashboard built with Django to visualize the sentiment trends and insights.
 
 ## Data description:
-in This Project I'm using a Dataset (twitter_training.csv and twitter_validation.csv) to create pyspark Model.
 
-Each line of the "twitter_training.csv" learning database represents a Tweet, it contains over 74682 lines;
+In This Project I'm using a Dataset (twitter_training.csv and twitter_validation.csv) to create pyspark Model and for create live tweets using Kafka. Each line of the "twitter_training.csv" learning database represents a Tweet, it contains over 74682 lines;
 
 The data types of Features are:
 - Tweet ID: int
@@ -35,10 +34,15 @@ The data types of Features are:
 - Sentiment: string (Target)
 - Tweet content: string
 
-The validation database “twitter_validation.csv” contains 998 lines (Tweets) with the same features of “twitter_training.csv”
+The validation database “twitter_validation.csv” contains 998 lines (Tweets) with the same features of “twitter_training.csv”.
 
 This is the Data Source:
 https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
+
+## Repository Structure
+
+- **Django-Dashboard** : this folder contains Dashboard Django Application
+- **Kafka-PySpark** : this folder contains kafka provider and pyspark streaming (kafka consumer).
 
 ## Getting Started
 
@@ -80,34 +84,49 @@ To run this project, you will need the following installed on your system:
    pip install -r requirements.txt
    ```
 
-6. **Configure Twitter API credentials**:
-   - Obtain Twitter API keys and tokens.
-   - Set them in your environment variables or a configuration file.
-
 ### Running the Project
+ 
+#### Running the Kafka and Spark Streaming application :
 
-1. **Start Kafka and create topics**:
+1. **Change the directory to the application**:
    ```bash
-   kafka-server-start.sh /path/to/kafka/config/server.properties
-   kafka-topics.sh --create --topic twitter-stream --bootstrap-server localhost:9092 --partitions 1 --replication-factor 1
+   cd Kafka-PySpark
    ```
 
-2. **Run the Spark Streaming application**:
+2. **Start Kafka in docker**:
    ```bash
-   spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.0.1 /path/to/your/spark/application.py
+   docker exec -it kafka1 /bin/bash
    ```
 
-3. **Start MongoDB**:
+3. **Run kafka Zookeeper and a Broker**:
+   ```bash
+   kafka-topics --create --topic twitter --bootstrap-server localhost:9092
+   kafka-topics --describe --topic twitter --bootstrap-server localhost:9092
+   ```
+
+4. **Start MongoDB**:
+   - using command line :
    ```bash
    mongod
    ```
+   - or using **MongoDBCompass** (Recommended).
 
-4. **Run the Django server**:
+5. **Run kafka provider app**:
+   ```bash
+   py producer-validation-tweets.py
+   ```
+
+6. **Run pyspark streaming (kafka consumer) app**:
+   ```bash
+   py consumer-pyspark.py
+   ```
+
+5. **Run the Django server**:
    ```bash
    python manage.py runserver
    ```
 
-5. **Access the Dashboard**:
+6. **Access the Dashboard**:
    Open your web browser and go to `http://127.0.0.1:8000` to view the real-time sentiment analysis dashboard.
 
 ## Contributing
