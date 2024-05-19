@@ -1,0 +1,140 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Big Data Project {% endblock title %}
+
+
+{% block links %}
+    <!-- <link rel="stylesheet" href="{% static 'css/css-reset.css' %}"> -->
+    <!-- <link rel="stylesheet" href="{% static 'css/normalize.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/myCss-fm.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+{% endblock links %}
+
+
+{% block content %}
+
+<header>
+    <div class="container flex-sp-bet">
+        <a href="{% url 'dashboard' %}">
+            <h2 class="logo">Dashboard</h2>
+        </a>
+        <nav class="nav">
+            <ul>
+                <li><a href="{% url 'dashboard' %}"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="{% url 'classify' %}"><i class="fa-solid fa-user-pen"></i> Classify</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="flex-ctr-clm">
+    <div class="flex-ctr-clm">
+
+        {% if len_data != 0 %}
+
+        <h2>Data Visualization</h2>
+
+        <div class="table_container flex-ctr-str">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Text</th>
+                        <th>Target</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        <td>{{ item.tweet }}</td>
+                        <td>{{ item.prediction }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <hr width="75%" color="black" />
+
+        <h2>Data Statistics</h2>
+
+        <div class="stats_container flex-ctr-clm">
+
+            <p style="font-size: 20px; font-weight: 600;">Total Data : <mark>{{ len_data }} </mark></p>
+
+            <div class="display-two flex-center">
+                <div class="flex-ctr-clm">
+                    <canvas id="myChart1"></canvas>
+                </div>
+                <div class="flex-ctr-clm">
+                    <h2>Sentiment Rates per Class</h2>
+                    <ul>
+                        {% for label, rate in sentiment_rates.items %}
+                        <li style="font-size: 22px; font-weight: 600;"> {{ label }} : {{ rate }} %</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <hr width="75%" color="black" />
+            <div class="display-two flex-center" style="flex-direction: column; height: 650px;">
+                    <h3>Top Word Frequencies for each class</h3>
+                    <img src="{% static 'imgs/Word_Frequencies_for_all_classes.png' %}" alt="Word_Frequencies_for_all_classes">
+            </div>
+        </div>
+            
+        {% else %}
+
+        <h1><mark>the DB is Empty!!</mark> </h1>
+
+        {% endif %}
+
+    </div>
+</main>
+
+{% endblock content %}
+
+
+{% block scripts %}
+<script src="{% static 'js/script.js' %}"></script>
+
+
+<script>
+    var expenses = {{ sentiment_counts|safe }}
+
+    console.log("Expenses:", expenses); 
+
+    var labels = Object.keys(expenses);
+    var amounts = Object.values(expenses);
+
+    var data = {
+        labels: labels,
+        datasets: [{
+            data: amounts,
+            backgroundColor: [
+                'rgba(255, 50, 50)',
+                'rgba(50, 200, 50)',
+                'rgba(50, 50, 200)',
+                'rgba(250, 250, 0)',
+            ]
+        }]
+    };
+
+    var options = {
+        plugins: {
+            legend: {
+                position: 'right' // Position legend at the bottom of the chart
+            }
+        }
+    };
+    
+    var ctx = document.getElementById('myChart1').getContext('2d');
+    var myPieChart = new Chart(ctx, {
+        type: 'pie',
+        data: data,
+        options: options
+    });
+
+
+</script>
+{% endblock scripts %}

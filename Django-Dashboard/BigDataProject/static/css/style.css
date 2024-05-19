@@ -1,0 +1,146 @@
+:root {
+    --color1 : #212121;
+    --color2 : #fff;
+    --color3 : #ff9900;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+main {
+    padding: 25px 0 15px;
+}
+
+.container {
+    max-width: 1300px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+p, h1, h2 {
+    padding: 7px 5px;
+}
+
+/* ********************* */
+
+header {
+    height: 60px;
+    width: 100vw;
+    background-color: #232323;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav ul li a{
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    transition: all .3s ease;
+}
+
+.nav ul li a:hover {
+    color: #eaf56d;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: 600;
+    color: var(--color2);
+}
+
+/* ********************* */
+/* ********************* */
+
+.table_container {
+    width: 100%;
+    margin: 10px 10px 20px;
+    height: 300px; 
+    overflow-y: scroll;
+}
+
+.table_container table {
+    width: 90%;
+    border-collapse: collapse;
+}
+
+.table_container th,
+.table_container td {
+    padding: 8px;
+    border: 1px solid #000000;
+    text-align: left;
+}
+
+/* Fix the table header when scrolling */
+.table_container thead {
+    position: sticky;
+    top: 0;
+    background-color: #8a8a8a;
+}
+
+td {
+    font-size: 13px;
+    background-color: #cac8c8;
+    font-weight: 600;
+}
+
+/* ********************* */
+/* ********************* */
+
+.display-two {
+    height: 500px;
+    width: 100vw;
+}
+
+.display-two div {
+    height: 100%;
+    width: 50%;
+    background-color: var(--color3);
+}
+
+img {
+    height: 80%;
+}
+
+/* ******************************* */
+
+.classify textarea{
+    width: 500px;
+    height: 300px;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    border-radius: 10px;
+    resize: none;
+}
+
+.classify button {
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: all .5s ease;
+    border: none;
+    outline: none;
+    background-color: #d1cece;
+}
+
+.classify button:hover {
+    background-color: #ff9900;
+}
+
+canvas {
+    height: 700px !important;
+    margin: 20px;
+    width: 400px;
+    max-width: 500px
+}

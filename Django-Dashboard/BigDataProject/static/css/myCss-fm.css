@@ -1,0 +1,149 @@
+
+
+/* ! ************************* my framwork ******************* */
+
+/* **** global ***** */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+/* **** end Global ***** */
+/* **** Flexbox ***** */
+
+.flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.flex-ctr-str {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+.flex-ctr-wr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.flex-sp-bet {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.flex-start {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+.flex-sp-ard {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.flex-ctr-clm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.flex-str-clm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* **** end Flexbox ***** */
+
+.center-position {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    padding: 7px 12px;
+    font-size: 20px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.side-bar {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    right: 0;
+    top: 0;
+}
+
+.linkedin{
+    color: #0A66C2;
+}
+.github{
+    color: #7b7c7d;
+}
+.pinterest{
+    color: #ff1500;
+}
+.instagram {
+    color: #fe7600;
+}
+
+a{
+  text-decoration: none;
+}
+
+.nav {
+  display: flex ;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav ul li {
+  padding: 7px 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+/* .nav ul li a {
+
+} */
+
+.pop-up {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: none;
+    background-color: rgb(0, 0, 0, 0.3);
+}
+
+.pop-up .content {
+    width: 100%;
+    padding: 15px;
+}
+
+.show-pop-up {
+    display: flex;
+}
