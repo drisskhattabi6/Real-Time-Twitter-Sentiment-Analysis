@@ -107,7 +107,7 @@ To run this project, you will need the following installed on your system:
 2. **Start Kafka in docker**:
    - using command line :
    ```bash
-   docker exec -it kafka1 /bin/bash
+   docker exec -it <kafka-container-id> /bin/bash
    ```
    - using docker desktop :
      
