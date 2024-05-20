@@ -44,7 +44,6 @@ https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
 - **Django-Dashboard** : this folder contains Dashboard Django Application
 - **Kafka-PySpark** : this folder contains kafka provider and pyspark streaming (kafka consumer).
 - **ML PySpark Model** : this folder contains the trained model with jupyter notebook and datasets.
-  **ML PySpark Model** : this folder contains the trained model with jupyter notebook and datasets.
 - **zk-single-kafka-single.yml** : Download and install Apache Kafka in docker.
 - **bigdataproject rapport** : a brief report about the project (in french).
 
@@ -61,6 +60,7 @@ To run this project, you will need the following installed on your system:
 - Apache Spark (PySpark for python)
 - MongoDB
 - Django
+- chart.js and matplotlib
 
 ### Installation
 
@@ -80,7 +80,6 @@ To run this project, you will need the following installed on your system:
 
 5. **Set up MongoDB**:
    - Download and install MongoDB.
-   - Start the MongoDB server.
      - It is recommended to install also **MongoDBCompass** to visualize data and makes working with mongodb easier.
 
 6. **Install Python dependencies**:
@@ -92,12 +91,13 @@ To run this project, you will need the following installed on your system:
 ### Running the Project
 
    Note : you will need MongoDB for Running the Kafka and Spark Streaming application and for Running Django Dashboard application.
--> **Start MongoDB**:
-   - using command line :
-   ```bash
-   sudo systemctl start mongod
-   ```
-   - then use **MongoDBCompass** (Recommended).
+   
+   - **Start MongoDB**:
+      - using command line :
+      ```bash
+      sudo systemctl start mongod
+      ```
+      - then use **MongoDBCompass** (Recommended).
 
 #### Running the Kafka and Spark Streaming application :
 
@@ -178,6 +178,13 @@ this is an img of the MongoDBCompass after Running the Kafka and Spark Streaming
 ## Supervised By : 
 
 - Prof. **Yasyn El Yusufi**
+
+---
+
+Abdelmalek Essaadi University - Faculty of Sciences and Technology of Tangier
+
+Master: Artificial Intelligence and Data Science
+Module: Big Data
 
 ---
 
