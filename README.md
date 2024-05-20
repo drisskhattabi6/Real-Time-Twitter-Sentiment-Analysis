@@ -1,8 +1,8 @@
-# Big Data Project: Real-Time Twitter Sentiment Analysis Using Kafka, Spark Streaming, MongoDB and Django.
+# Big Data Project: Real-Time Twitter Sentiment Analysis Using Kafka, Spark (MLLib & Streaming), MongoDB and Django.
 
 ## Overview
 
-This repository contains a Big Data project focused on real-time sentiment analysis of Twitter data. The project leverages various technologies to collect, process, analyze, and visualize sentiment data from tweets in real-time.
+This repository contains a Big Data project focused on real-time sentiment analysis of Twitter data (classification of tweets). The project leverages various technologies to collect, process, analyze, and visualize sentiment data from tweets in real-time.
 
 ## Project Architecture
 
@@ -12,6 +12,7 @@ The project is built using the following components:
 - **Spark Streaming**: Processes the streaming data from Kafka to perform sentiment analysis.
 - **MongoDB**: Stores the processed sentiment data.
 - **Django**: Serves as the web framework for building a real-time dashboard to visualize the sentiment analysis results.
+- **chart.js** & **matplotlib** : for plotting.
 
 - This is the project plan :
    ![project img](imgs/flow.png)
@@ -60,7 +61,6 @@ To run this project, you will need the following installed on your system:
 - Apache Spark (PySpark for python)
 - MongoDB
 - Django
-- chart.js and matplotlib
 
 ### Installation
 
@@ -183,9 +183,11 @@ this is an img of the MongoDBCompass after Running the Kafka and Spark Streaming
 
 Abdelmalek Essaadi University - Faculty of Sciences and Technology of Tangier
 
-Master: Artificial Intelligence and Data Science
-Module: Big Data
+- Master: Artificial Intelligence and Data Science
+- Module: Big Data
 
 ---
 
-By following the above instructions, you should be able to set up and run the real-time Twitter sentiment analysis project on your local machine. Happy coding!
+- By following the above instructions, you should be able to set up and run the real-time Twitter sentiment analysis project on your local machine. Happy coding!
+
+- Feel free to explore the project and customize it according to your requirements. If you encounter any issues or have any questions, don't hesitate to reach out!
