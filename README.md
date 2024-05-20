@@ -1,4 +1,4 @@
-# Big Data Project: Real-Time Twitter Sentiment Analysis Using Kafka, Pyspark, MongoDB and Django.
+# Big Data Project: Real-Time Twitter Sentiment Analysis Using Kafka, Spark Streaming, MongoDB and Django.
 
 ## Overview
 
@@ -67,7 +67,7 @@ To run this project, you will need the following installed on your system:
 1. **Clone the repository**:
    ```bash
    git clone https://github.com/drisskhattabi6/Real-Time-Twitter-Sentiment-Analysis.git
-   cd big-data-project
+   cd Real-Time-Twitter-Sentiment-Analysis
    ```
    
 2. **Installing Docker Desktop**
