@@ -44,8 +44,10 @@ https://www.kaggle.com/datasets/jp797498e/twitter-entity-sentiment-analysis
 - **Django-Dashboard** : this folder contains Dashboard Django Application
 - **Kafka-PySpark** : this folder contains kafka provider and pyspark streaming (kafka consumer).
 - **ML PySpark Model** : this folder contains the trained model with jupyter notebook and datasets.
+  **ML PySpark Model** : this folder contains the trained model with jupyter notebook and datasets.
 - **zk-single-kafka-single.yml** : Download and install Apache Kafka in docker.
 - **bigdataproject rapport** : a brief report about the project (in french).
+
 
 ## Getting Started
 
@@ -93,9 +95,9 @@ To run this project, you will need the following installed on your system:
 -> **Start MongoDB**:
    - using command line :
    ```bash
-   mongod
+   sudo systemctl start mongod
    ```
-   - or using **MongoDBCompass** (Recommended).
+   - then use **MongoDBCompass** (Recommended).
 
 #### Running the Kafka and Spark Streaming application :
 
@@ -109,7 +111,7 @@ To run this project, you will need the following installed on your system:
    ```bash
    docker exec -it <kafka-container-id> /bin/bash
    ```
-   - using docker desktop :
+   - or using docker desktop :
      
      ![ docker desktop img](imgs/img5.png)
 
@@ -175,7 +177,7 @@ this is an img of the MongoDBCompass after Running the Kafka and Spark Streaming
 
 ## Supervised By : 
 
-Prof. Yasyn El Yusufi
+- Prof. **Yasyn El Yusufi**
 
 ---
 
