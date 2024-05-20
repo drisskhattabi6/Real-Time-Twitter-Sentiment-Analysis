@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Big Data Project {% endblock title %}
+
+
+{% block links %}
+    <!-- <link rel="stylesheet" href="{% static 'css/css-reset.css' %}">
+    <link rel="stylesheet" href="{% static 'css/normalize.css' %}"> -->
+    <link rel="stylesheet" href="{% static 'css/myCss-fm.css' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+{% endblock links %}
+
+
+{% block content %}
+
+<header>
+    <div class="container flex-sp-bet">
+        <a href="{% url 'classify' %}">
+            <h2 class="logo">Classify Data</h2>
+        </a>
+        <nav class="nav">
+            <ul>
+                <li><a href="{% url 'dashboard' %}"><i class="fa-solid fa-house"></i> Dashboard</a></li>
+                <li><a href="{% url 'classify' %}"><i class="fa-solid fa-user-pen"></i> Classify</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="flex-ctr-clm">
+    <div class="container flex-ctr-clm">
+        <h2>Text Classify using pyspark model : </h2>
+        <br>
+        <form method="post" enctype="multipart/form-data" class="flex-ctr-clm classify">
+            {% csrf_token %}
+            <textarea placeholder="Enter your text" name="text"></textarea>
+            <button type="submit" style="font-weight: 600;">Classify</button>
+        </form>
+        <br>
+        {% if text_len > 0 or error %}
+            {% if error %}
+            <h3 style="color: red;">{{ error_text }}</h3>
+            {% else %}
+            <ul>
+                <li>Text : {{ text }}</li>
+                <li>Prediction : <mark style="font-weight: 600;">{{ prediction }}</mark></li>
+            </ul>
+            {% endif %}
+        {% endif %}
+
+    </div>
+</main>
+
+{% endblock content %}
+
+
+{% block scripts %}
+<script src="{% static 'js/script.js' %}"></script>
+{% endblock scripts %}
