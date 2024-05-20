@@ -167,9 +167,15 @@ this is an img of the MongoDBCompass after Running the Kafka and Spark Streaming
 - in the Dashboard, There is 3 statistics or plots : labels rates - pie plot - bar plot.
 
 
-## Author :
+## Team :
 
-Khattabi Idriss / Boufarhi Ayman / Abdelali IBN TABET
+- [Khattabi Idriss](https://github.com/drisskhattabi6) 
+- [Boufarhi Ayman](https://github.com/aymanboufarhi) 
+- [Abdelali IBN TABET](https://github.com/abd-ibn)
+
+## Supervised By : 
+
+Prof. Yasyn El Yusufi
 
 ---
 
